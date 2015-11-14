@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>如何利用github+hexo搭建个人技术博客 | Gavinyee&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#准备工作#首先你的电脑必须已经安装了node.js和git。默认安装即可，可以上网查找相关的教程进行安装，这里就不再赘述。
+#一、安装Hexo#在你的电脑某个磁盘上新建一个文件夹，用于存放你的hexo工程。比如我就在K盘新建了一个Hexo文件夹，然后鼠标右键，点Git Bash Here（最好不要使用windows自带的cmd命令工具通过cd操作进入到你的工程目录，然后再调用git，因为可能你在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何利用github+hexo搭建个人技术博客">
+<meta property="og:url" content="http://yoursite.com/2015/11/13/如何利用github-hexo搭建个人技术博客/index.html">
+<meta property="og:site_name" content="Gavinyee's Blog">
+<meta property="og:description" content="#准备工作#首先你的电脑必须已经安装了node.js和git。默认安装即可，可以上网查找相关的教程进行安装，这里就不再赘述。
+#一、安装Hexo#在你的电脑某个磁盘上新建一个文件夹，用于存放你的hexo工程。比如我就在K盘新建了一个Hexo文件夹，然后鼠标右键，点Git Bash Here（最好不要使用windows自带的cmd命令工具通过cd操作进入到你的工程目录，然后再调用git，因为可能你在">
+<meta property="og:image" content="http://yoursite.com/images/hexo-web.png">
+<meta property="og:image" content="http://yoursite.com/images/ssh_key.png">
+<meta property="og:updated_time" content="2015-11-14T08:36:43.731Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何利用github+hexo搭建个人技术博客">
+<meta name="twitter:description" content="#准备工作#首先你的电脑必须已经安装了node.js和git。默认安装即可，可以上网查找相关的教程进行安装，这里就不再赘述。
+#一、安装Hexo#在你的电脑某个磁盘上新建一个文件夹，用于存放你的hexo工程。比如我就在K盘新建了一个Hexo文件夹，然后鼠标右键，点Git Bash Here（最好不要使用windows自带的cmd命令工具通过cd操作进入到你的工程目录，然后再调用git，因为可能你在">
+  
+    <link rel="alternative" href="/atom.xml" title="Gavinyee&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://raw.githubusercontent.com/gavinyee/gavinyee.github.io/master/avatar/header.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Gavinyee</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/gavinyee" title="github">github</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/github-hexo/" style="font-size: 10px;">github hexo</a> <a href="/tags/helloworld/" style="font-size: 10px;">helloworld</a> <a href="/tags/lin-love/" style="font-size: 10px;">lin love</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.w3ctech.com/">w3ctech</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://litten.github.io/">Litten的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://blog.fens.me/hexo-blog-github/">Conan的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://zipperary.com/categories/hexo/">Zippera的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">北京邮电大学小硕，前端技术爱好者</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Gavinyee</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://raw.githubusercontent.com/gavinyee/gavinyee.github.io/master/avatar/header.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Gavinyee</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/gavinyee" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-如何利用github-hexo搭建个人技术博客" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/13/如何利用github-hexo搭建个人技术博客/" class="article-date">
+  	<time datetime="2015-11-13T07:28:56.000Z" itemprop="datePublished">2015-11-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      如何利用github+hexo搭建个人技术博客
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github-hexo/">github hexo</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/前端/">前端</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#准备工作#<br>首先你的电脑必须已经安装了node.js和git。默认安装即可，可以上网查找相关的教程进行安装，这里就不再赘述。</p>
+<p>#一、安装Hexo#<br>在你的电脑某个磁盘上新建一个文件夹，用于存放你的hexo工程。比如我就在K盘新建了一个Hexo文件夹，然后鼠标右键，点Git Bash Here（最好不要使用windows自带的cmd命令工具通过cd操作进入到你的工程目录，然后再调用git，因为可能你在先前安装git的过程中，因为默认安装选项是use git bash only，可能在cmd中调用git会出错，我当时就因为这一点折腾了好久，后来上网查了各种资料才解决），这样就打开了git命令窗口。</p>
+<p>在命令行中输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
+<p>这样就会安装Hexo。<br>查看Hexo的版本，使用下面的命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo version</span><br></pre></td></tr></table></figure>
+<p>这样我们就可以使用Hexo一步步地开始创建我们的项目了。</p>
+<a id="more"></a>
+<p>#二、初始化Hexo#</p>
+<p>在命令行中输入下面命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure></p>
+<p>这样就会在你的Hexo文件下创建了一系列的初始化文件。</p>
+<p>第三步，启动Hexo服务器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+<p>此时，你可以在你的浏览器窗口输入 <a href="http://localhost:4000（默认侦听4000端口），这样就可以看到你的博客已经创建好了。" target="_blank" rel="external">http://localhost:4000（默认侦听4000端口），这样就可以看到你的博客已经创建好了。</a></p>
+<p><img src="/images/hexo-web.png" alt=""></p>
+<p>#三、发布到Github#<br>第一步，首先你得去注册一个github账号，这里不再赘述。</p>
+<p>第二步，在命令中输入以下命令，<br>进入你的github主页，点击右上角你的头像，点Settings，在网页左侧会出现一个侧边栏，找到SSH keys这一项，点进去，然后点Add SSH key，</p>
+<p>##1.检查SSH Key的配置##<br>在命令行中输入以下命令，</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/. ssh</span><br></pre></td></tr></table></figure>
+<p>如果提示：No such file or directory，说明你是第一次使用git，那么就需要进行下一步，</p>
+<p>##2.生成新的SSH key##</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"***@***.com"</span></span><br></pre></td></tr></table></figure>
+<p>这里填的邮件地址就是你用来注册github账号所使用的邮箱，之后我们就会将创建好的博客发布到与你这个邮箱绑定的github主页上。</p>
+<p>命令行会提示</p>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Generating <span class="keyword">public</span>/<span class="keyword">private</span> rsa key <span class="built_in">pair</span><span class="built_in">.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter <span class="built_in">file</span> <span class="operator">in</span> which <span class="built_in">to</span> save <span class="operator">the</span> key (/Users/your_user_directory/.ssh/id_rsa):</span><br></pre></td></tr></table></figure>
+<p>这里就是让你填生成的SSH key 你希望存放在哪个目录下，直接按回车就行。在回车后会提示你输入一个密码，这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。</p>
+<p>最后，你看到下面的提示，就表明你已经成功设置SSH key了：</p>
+<p><img src="/images/ssh_key.png" alt=""></p>
+<p>##3.添加SSH key到Github##</p>
+<p>（1）在你的电脑中，打开C:\Users*.ssh目录，其中*为你的电脑账户名，打开id_rsa.pub文件，将里面的内容复制。</p>
+<p>（2）登录你的github主页，点击你的头像，点Settings,在网页左边有一个SSH的选项，点进去，点Add SSH key，把你第一小步复制的key添加进去。这样你的SSH key就添加成功了。</p>
+<p>##4.在Github中建立repository##</p>
+<p>在你的Github主页右上角的头像处点击New repository，命名方式为yourname.github.io，其中yourname为你的Github账户名。然后将“Initialize this repository with a README”选项勾上。点击Create repository即可。</p>
+<p>##5.发布##<br>（1）打开你的电脑存放项目工程的文件夹根目录下的_config.yml文件，在文件的最后有一个发布配置项，<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:***<span class="comment">/***.github.io.git</span><br><span class="line">  branch: master</span></span><br></pre></td></tr></table></figure></p>
+<p>特别注意这里type要填git，而不是github（已经被废弃，当时就因为这个原因折腾了好久导致发布失败），下面的repo填SSH形式的URL，而不是<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/<span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span>/<span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span>.github.io.git</span><br></pre></td></tr></table></figure></p>
+<p>这种形式的。另外特别需要注意的是，冒号后面都要留一个半角的空格，否则会出错。</p>
+<p>（2）接下来我们就可以正式发布了。在Git bash命令中首先输入<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash npm <span class="operator"><span class="keyword">install</span> hexo-deployer-git<span class="comment">--save</span></span></span><br></pre></td></tr></table></figure></p>
+<p>这一点特别特别重要，否则会发布失败。<br>接着执行下面三条命令就可以发布成功了。</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bash </span>hexo clean</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash hexo <span class="function"><span class="title">generate</span><span class="params">(hexo g)</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash hexo <span class="function"><span class="title">deploy</span><span class="params">(hexo d)</span></span></span><br></pre></td></tr></table></figure>
+<p>这样就将你的个人博客发布到github上了，在你的浏览器中输入<em>*</em>.github.io，就可以访问你的个人主页了。新写文章就用下面的命令</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash hexo <span class="keyword">new</span> <span class="string">"your article name(你的文章名字)"</span></span><br></pre></td></tr></table></figure>
+<p>然后根据markdown语法打开你的工程文件夹下的sources_posts\your article.md文件进行编辑，然后重新输入上面的三条命令就可以重新发布了。</p>
+<p>#四、总结#<br>这篇文章简单的介绍了如何利用github+hexo搭建个人博客，写的比较简单，但大致都能看懂。主要是里面有根据本人当时搭建过程遇到的问题上网查资料解决的过程，希望读者能够少走一些弯路。另外，关于如何绑定个人域名以及安装disqus评论插件等内容，请参看其他资料。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/11/13/my-love/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">my love</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="如何利用github-hexo搭建个人技术博客" data-title="如何利用github+hexo搭建个人技术博客" data-url="http://yoursite.com/2015/11/13/如何利用github-hexo搭建个人技术博客/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Gavinyee
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
